@@ -13,20 +13,29 @@ h2 {
 }
 
 body {
-	background-image:url("https://lh4.googleusercontent.com/-rB4soGWs_gw/WErXOSyDz5I/AAAAAAAAAdo/bg6UF2JwOoAsaHxcyo5FSUai_Og0s_5pACLIB/w800-h600-p-k-no/");
+	background-image:url("https://lh4.googleusercontent.com/-rB4soGWs_gw/WErXOSyDz5I/AAAAAAAAAdo/bg6UF2JwOoAsaHxcyo5FSUai_Og0s_5pACLIB/w2000-h1500-p-k-no/");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .banner {
-	position: relative;
+	position: fixed;
 	top: 0;
-	left: 0;
-	width: 100%;
+	width: 80%;
 	height: 250px;
 	z-index: 10000;
 	background-color: #72666a;
 }
 
+.logoname {
+	position:relative;
+	float: left;
+	margin:0px 250px;
+}
+
 .banner #logo {
+	position:relative;
 	float: left;
 	height:250px;
 	width:250px;
@@ -34,13 +43,17 @@ body {
 
 .banner #nametapas {
 	float: left;
+	height:250px;
+	width:500px;
 }
 
 .banner #nameesteban {
 	float: left;
+	height:250px;
+	width:500px;
 }
 
-@media ( min-width : 1270px) {
+/* @media ( min-width : 1270px) {
 	
 	.banner .namepart {
 		height:250px;
@@ -58,14 +71,14 @@ body {
 		height:125px;
 		width:250px;
 	}
-}
+} */
 
 .navigation {
-	top: 0px;
-	position: relative;
+	top: 250px;
+	position: fixed;
 	float: left;
 	height: 100%;
-	width: 20%;
+	width: 10%;
 	background-color: #72666a;
 	font-color: white;
 	z-position:1000;
@@ -73,18 +86,15 @@ body {
 
 .main {
 	position:relative;
-	top: 0px;
-	width:80%;
-	float:right;
-	left: 0px;
-	background-image:
-		url("https://lh4.googleusercontent.com/-rB4soGWs_gw/WErXOSyDz5I/AAAAAAAAAdo/bg6UF2JwOoAsaHxcyo5FSUai_Og0s_5pACLIB/w800-h600-p-k-no/");
+	top: 230px;
+	width:90%;
+	left:10%;
 	background-repeat: none;
 	font-family:Papyrus;
 }
 
 .content {
-	margin:0px 200px;
+	margin:0px 10%;
 	height:100%;
 }
 
