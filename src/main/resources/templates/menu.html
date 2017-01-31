@@ -9,35 +9,54 @@
 
 <link rel="stylesheet" th:href="@{/css/main.css}"
 	href="../../css/main.css" />
-
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-	<nav class="navbar navbar-inverse">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Tapas Esteban</a>
+	<div class="content">
+		<div class="banner">
+			<img id="logo" th:src="@{/images/Esteban_Side_Logo.png}" />
+			<div id="logoname">
+				<img class="namepart" th:src="@{/images/Tapas.png}" /><img
+					class="namepart" th:src="@{/images/Esteban.png}" />
 			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="/">Home</a></li>
+		</div>
+		<div class="navigation">
+			<div>
+				<a href="#">Tapas Esteban</a>
+			</div>
+			<div>
+				<ul>
+					<li><a href="/">Home</a></li>
 					<li><a href="/aboutus">About</a></li>
 					<li><a href="/menu">Menu</a></li>
 					<li><a href="/contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
-	</nav>
+		<div class="main">
 
-	<div class="container">
 
-		<div class="starter-template">
-			<h1>Menu Page</h1>
-			<h2>
-				<span th:text="'Message: ' + ${message}"></span>
-			</h2>
+			<div class="menuBox">
+
+				<div class="menuItemActive">
+					<h1 id="name"></h1>
+					<h2 id="description"></h2>
+				</div>
+				<div class="restaurantMenu">
+					<ul >
+						<li th:each="category:${categories}">
+							<h3 th:text="${category.name}"></h3>
+							<ul>
+								<li th:each="menuItem:${category.menuItems}" th:text="${menuItem.name}"/>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-
 	</div>
 	<!-- /.container -->
 
