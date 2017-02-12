@@ -1,115 +1,112 @@
- * {
-	box-sizing:border-box;
-	 /* border: 1px solid firebrick;   */
-} 
-
-h1 {
-	color: #000000;
-	background-color: #E3C77B;
+* {
+	box-sizing: border-box;
 }
 
-h2 {
-	background-color: #E3C77B;
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-	background-image:url("https://lh4.googleusercontent.com/-rB4soGWs_gw/WErXOSyDz5I/AAAAAAAAAdo/bg6UF2JwOoAsaHxcyo5FSUai_Og0s_5pACLIB/w2000-h1500-p-k-no/");
+	background-image:
+		url("../images/tapasestebanbackgroundblurreddark.png");
 	background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }
 
 .banner {
 	position: fixed;
 	top: 0;
-	width: 80%;
-	height: 250px;
+	height: 200px;
 	z-index: 10000;
-	background-color: #72666a;
 }
 
 .logoname {
-	position:relative;
+	position: relative;
 	float: left;
-	margin:0px 250px;
+	margin: 0px 250px;
 }
 
 .banner #logo {
-	position:relative;
+	position: relative;
 	float: left;
-	height:250px;
-	width:250px;
+	height: 200px;
+	width: 200px;
+}
+
+.banner .namepart {
+	height: 200px;
+	width: 400px;
 }
 
 .banner #nametapas {
 	float: left;
-	height:250px;
-	width:500px;
+	height: 100%;
+	width: 40%;
 }
 
 .banner #nameesteban {
 	float: left;
-	height:250px;
-	width:500px;
+	height: 100%;
+	width: 40%;
 }
 
-/* @media ( min-width : 1270px) {
+/* @media ( min-width : 1600px) {
 	
 	.banner .namepart {
 		height:250px;
 		width:500px;
 	}
-	.banner #nameesteban {
-		height:250px;
-		width:250px;
-	}
 }
 
-@media ( max-width : 1269px) {
+@media ( max-width : 1599px) {
 	
 	.banner .namepart {
 		height:125px;
 		width:250px;
 	}
 } */
-
 .navigation {
-	top: 250px;
+	top: 200px;
 	position: fixed;
 	float: left;
 	height: 100%;
-	width: 10%;
+	width: 200px;
 	background-color: #72666a;
 	font-color: white;
-	z-position:1000;
+	z-index: 1000;
 }
 
 .main {
-	position:relative;
-	top: 230px;
-	width:90%;
-	left:10%;
+	position: relative;
+	top: 200px;
+	width: 800px;
+	left: 200px;
 	background-repeat: none;
-	font-family:Papyrus;
+	font-family: Papyrus;
+	padding: 10px;
 }
 
 .content {
-	margin:0px 10%;
-	height:100%;
+	margin: auto;
+	height: 100%;
+	max-width: 1000px;
 }
 
-#myCarousel {
-	position: relative;
-	width:100%;
+.textbox {
+	color: white;
 }
 
-.textbox{
-	background-color:#E3C77B;
+.socialmedia{
+	position: fixed;
+    bottom: 0;
+    display:inline-block;
+    float:left;
+	}
+	
+.twitter-follow-button{
+	data-show-screen-name:false;
 	}
 }
-
-.carousel-inner>.item>img, .carousel-inner>.item>a>img {
-	width: 100%;
-	margin: auto;
-	margin: 10%;
 }

@@ -9,35 +9,51 @@
 
 <link rel="stylesheet" th:href="@{/css/main.css}"
 	href="../../css/main.css" />
-
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-	<nav class="navbar navbar-inverse">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Tapas Esteban</a>
+	<div class="content">
+		<div class="banner">
+			<img id="logo" th:src="@{/images/Esteban_Side_Logo.png}" />
+				<img class="namepart" th:src="@{/images/Tapas.png}" /><img
+					class="namepart" th:src="@{/images/Esteban.png}" />
+			
+		</div>
+		<div class="navigation">
+			<div>
+				<a href="#">Tapas Esteban</a>
 			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="/">Home</a></li>
+			<div>
+				<ul>
+					<li><a href="/">Home</a></li>
 					<li><a href="/aboutus">About</a></li>
 					<li><a href="/menu">Menu</a></li>
 					<li><a href="/contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
-	</nav>
+		<div class="main">
 
-	<div class="container">
 
-		<div class="starter-template">
-			<h1>Contact Page</h1>
-			<h2>
-				<span th:text="'Message: ' + ${message}"></span>
-			</h2>
+			<div>
+
+				<div class="textbox">
+					<h1>Tapas in the heart of Chorley</h1>
+					<h2>Quirky little tapas bar in the heart of Chorley town
+						center. Serving global cuisine. Catering for all, Meat, Seafood,
+						Vegan, Vegetarian, Gluten free, Dairy free and more. Unlicensed,
+						so why not bring your own for just a small corkage charge of £3.50
+						per person. We'll supply the glasses, wine coolers, ice, lemon and
+						lime where needed. Using local suppliers we serve hot and cold
+						drinks, pizzas, sandwiches, desserts, confectioneries and of
+						course tapas, all made in house. There is something for everyone!</h2>
+				</div>
+
+			</div>
 		</div>
-
 	</div>
 	<!-- /.container -->
 
