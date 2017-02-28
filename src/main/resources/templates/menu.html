@@ -3,7 +3,7 @@
 <head>
 <title>Tapas Esteban</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" type="text/css"
 	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
 
@@ -17,14 +17,11 @@
 <body>
 	<div class="content">
 		<div class="banner">
-			<img id="logo" th:src="@{/images/Esteban_Side_Logo.png}" />
-				<img class="namepart" th:src="@{/images/Tapas.png}" /><img
-					class="namepart" th:src="@{/images/Esteban.png}" />	
+			<img id="logo" th:src="@{/images/Esteban_Side_Logo.png}" /> <img
+				class="namepart" th:src="@{/images/Tapas.png}" /><img
+				class="namepart" th:src="@{/images/Esteban.png}" />
 		</div>
 		<div class="navigation">
-			<div>
-				<a href="#">Tapas Esteban</a>
-			</div>
 			<div>
 				<ul>
 					<li><a href="/">Home</a></li>
@@ -44,11 +41,14 @@
 					<h2 id="description"></h2>
 				</div>
 				<div class="restaurantMenu">
-					<ul >
+					<ul>
 						<li th:each="category:${categories}">
-							<h3 th:text="${category.name}"></h3>
+							<h2 th:text="${category.name}"></h2>
 							<ul>
-								<li th:each="menuItem:${category.menuItems}" th:text="${menuItem.name}"/>
+								<li th:each="menuItem:${category.menuItems}">
+									<h3 th:text="${menuItem.name}"></h3>
+									<p th:text="${menuItem.description}" />
+								</li>
 							</ul>
 						</li>
 					</ul>

@@ -26,7 +26,33 @@ public class MenuController {
 	private boolean first = true;
 	
 	@RequestMapping("/menu")
-	public String welcome(Map<String,Object> model) {
+	public String menu(Map<String,Object> model) {
+		if(first){
+		menuService.addNewCategory("BREAKFASTS");
+		menuService.addNewCategory("PIZZAS");
+		menuService.addNewCategory("SANDWICHES");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("Spanish Omelette", "", new HashSet<Integer>()),"BREAKFASTS");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("Serrano, rocket, tomato & fried egg", "", new HashSet<Integer>()),"BREAKFASTS");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("Scrambled egg, mushroom & cheese", "", new HashSet<Integer>()),"BREAKFASTS");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("Poached egg, oven dried tomato & cheese sauce", "", new HashSet<Integer>()),"BREAKFASTS");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("Tolouse", "Brie, pistachio, black seedless grapes", new HashSet<Integer>()),"PIZZAS");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("Zorba", "Feta, cocktail onions, oven dried tomatoes", new HashSet<Integer>()),"PIZZAS");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("Americano", "", new HashSet<Integer>()),"PIZZAS");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("BBQ pork", "", new HashSet<Integer>()),"PIZZAS");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("Thai", "Thai green vegetables", new HashSet<Integer>()),"PIZZAS");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("Satay", "Satay roast vegetables ", new HashSet<Integer>()),"PIZZAS");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("Albondigas", "Meatball marinara (tomato)", new HashSet<Integer>()),"PIZZAS");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("Pesto", "Serrano, rocket & pesto", new HashSet<Integer>()),"PIZZAS");
+		menuService.addMenuItemToCategory(itemFactory.createMenuItem("Spiaggia", "Prawns, calamari, & mussels", new HashSet<Integer>()),"PIZZAS");
+		
+		first= false;
+		}
+		model.put("categories", menuService.getCategories());
+		return "menu";
+	}
+	
+	@RequestMapping("/tapasmenu")
+	public String tapasMenu(Map<String,Object> model) {
 		if(first){
 		menuService.addNewCategory("Starters");
 		menuService.addNewCategory("Mains");

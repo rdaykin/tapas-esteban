@@ -3,7 +3,10 @@
 <head>
 <title>Tapas Esteban</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="googlebot" content="noindex, nofollow" />
+<script type="text/javascript" src="/js/lib/dummy.js"></script>
 <link rel="stylesheet" type="text/css"
 	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
 
@@ -17,15 +20,12 @@
 <body>
 	<div class="content">
 		<div class="banner">
-			<img id="logo" th:src="@{/images/Esteban_Side_Logo.png}" />
-				<img class="namepart" th:src="@{/images/Tapas.png}" /><img
-					class="namepart" th:src="@{/images/Esteban.png}" />
-			
+			<img id="logo" th:src="@{/images/Esteban_Side_Logo.png}" /> <img
+				class="namepart" th:src="@{/images/Tapas.png}" /><img
+				class="namepart" th:src="@{/images/Esteban.png}" />
+
 		</div>
 		<div class="navigation">
-			<div>
-				<a href="#">Tapas Esteban</a>
-			</div>
 			<div>
 				<ul>
 					<li><a href="/">Home</a></li>
@@ -36,29 +36,71 @@
 			</div>
 		</div>
 		<div class="main">
-
-
-			<div>
-
-				<div class="textbox">
-					<h1>Tapas in the heart of Chorley</h1>
-					<h2>Quirky little tapas bar in the heart of Chorley town
-						center. Serving global cuisine. Catering for all, Meat, Seafood,
-						Vegan, Vegetarian, Gluten free, Dairy free and more. Unlicensed,
-						so why not bring your own for just a small corkage charge of £3.50
-						per person. We'll supply the glasses, wine coolers, ice, lemon and
-						lime where needed. Using local suppliers we serve hot and cold
-						drinks, pizzas, sandwiches, desserts, confectioneries and of
-						course tapas, all made in house. There is something for everyone!</h2>
-				</div>
-
+			<div class="contact">
+				<h1>Address</h1>
+				<p>
+					8 Cleveland St<br/>Chorley<br/>PR7 1BH
+				</p>
+				<h1>Phone</h1>
+					<p>
+						01257 261259
+					</p>
+					<h1>Opening hours</h1>
+					<p>
+						Tuesday/t10am–4pm<br/>
+Wednesday/t10am–4pm<br/>
+Thursday/t10am–4pm<br/>
+Friday/t10am–10pm<br/>
+Saturday/t10am–10pm<br/>
+Sunday/tClosed<br/>
+Monday/tClosed<br/>
+					</p>
 			</div>
+			<div class="map">
+				<script src="https://maps.googleapis.com/maps/api/js"></script>
+				<script type='text/javascript'>
+					//<![CDATA[
+
+					function initialize() {
+
+						var mapOptions = {
+							zoom : 19,
+							center : new google.maps.LatLng(53.653435,-2.6313047),
+							mapTypeId : google.maps.MapTypeId.ROADMAP
+						}
+						var mapCanvas = document.createElement("div");
+						mapCanvas.id = "canvas";
+						document.getElementsByClassName("map")[0].appendChild(mapCanvas);
+						//document.body.appendChild(mapCanvas);
+						var map = new google.maps.Map(mapCanvas, mapOptions);
+					}
+
+					google.maps.event
+							.addDomListener(window, 'load', initialize);
+					//]]>
+				</script>
+
+				<script type='text/javascript'>
+					// tell the embed parent frame the height of the content
+					if (window.parent == window.parent.parent) {
+						window.parent.parent.postMessage([
+								"resultsFrame",
+								{
+									height : document.body
+											.getBoundingClientRect().height,
+									slug : "vQKkq"
+								} ], "*")
+					}
+				</script>
+				<script type="text/javascript"
+					src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			</div>
+
 		</div>
 	</div>
 	<!-- /.container -->
 
-	<script type="text/javascript"
-		src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>

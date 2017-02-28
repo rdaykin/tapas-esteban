@@ -4,11 +4,25 @@
 
 h1 {
 	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+p {
+	text-align: center;
 }
 
 body {
-	background-image:
-		url("../images/tapasestebanbackgroundblurreddark.png");
+	background-image: url("../images/tapasestebanbackgroundblurreddark.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
@@ -31,82 +45,227 @@ body {
 .banner #logo {
 	position: relative;
 	float: left;
-	height: 200px;
-	width: 200px;
 }
 
-.banner .namepart {
-	height: 200px;
-	width: 400px;
-}
-
-.banner #nametapas {
-	float: left;
-	height: 100%;
-	width: 40%;
-}
-
-.banner #nameesteban {
-	float: left;
-	height: 100%;
-	width: 40%;
-}
-
-/* @media ( min-width : 1600px) {
-	
-	.banner .namepart {
-		height:250px;
-		width:500px;
-	}
-}
-
-@media ( max-width : 1599px) {
-	
-	.banner .namepart {
-		height:125px;
-		width:250px;
-	}
-} */
 .navigation {
-	top: 200px;
 	position: fixed;
 	float: left;
-	height: 100%;
-	width: 200px;
 	background-color: #72666a;
 	font-color: white;
-	z-index: 1000;
+	z-index: 10000;
+}
+
+.navigation ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #72666a;
+}
+
+.restaurantMenu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	color: white;
+}
+
+.navigation li {
+	float: left;
+	width: 25%;
+}
+
+.navigation li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.navigation li a:hover {
+	background-color: black;
+}
+
+@media screen and (min-width: 1021px) {
+	.banner #logo {
+		height: 200px;
+		width: 200px;
+	}
+	.banner .namepart {
+		height: 200px;
+		width: 400px;
+	}
+	.main {
+		top: 250px;
+		width: 1000px;
+	}
+	.main p {
+		font-size: 100%;
+		padding: 10px;
+	}
+	.main h1 {
+		font-size: 200%;
+	}
+	.content {
+		max-width: 1000px;
+	}
+	.main img {
+		width: 200px;
+		height: 150px;
+	}
+	.textbox {
+		width: 400px;
+		height: 300px;
+	}
+	.navigation {
+		top: 200px;
+		height: 50px;
+		width: 1000px;
+	}
+	#canvas {
+	width:500px;
+	height:400px;
+	right:0;
+	display: inline-block;
+} 
+}
+
+@media screen and (max-width: 1020px) {
+	.banner #logo {
+		height: 100px;
+		width: 100px;
+	}
+	.banner .namepart {
+		height: 100px;
+		width: 200px;
+	}
+	.navigation {
+		top: 100px;
+		height: 50px;
+		width: 500px;
+	}
+	.main {
+		top: 150px;
+		width: 500px; /* 
+		font-weight: 10px; */
+	}
+	.main p {
+		font-size: 50%;
+		padding: 10px;
+	}
+	.main h1 {
+		font-size: 100%;
+	}
+	.main img {
+		width: 200px;
+		height: 150px;
+	}
+	.content {
+		max-width: 500px;
+	}
+	.textbox {
+		width: 200px;
+		height: 150px;
+	}
+	#canvas {
+	width:250px;
+	height:200px;
+	right:0;
+	display: inline-block;
+} 
+}
+
+@media screen and (max-width: 510px) {
+	.banner #logo {
+		height: 50px;
+		width: 50px;
+	}
+	.banner .namepart {
+		height: 50px;
+		width: 100px;
+	}
+	.navigation {
+		top: 50px;
+		height: 25px;
+		width: 250px;
+		font-size: 60%;
+	}
+	.main {
+		top: 100px;
+		width: 250px;
+	}
+	.main p {
+		font-size: 50%;
+	}
+	.main h1 {
+		font-size: 75%;
+	}
+	.main img {
+		width: 100px;
+		height: 75px;
+	}
+	.content {
+		max-width: 250px;
+	}
+	.textbox {
+		width: 140px;
+		height: 225px;
+	}
+	#canvas {
+	width:250px;
+	height:200px;
+	right:0;
+	display: inline-block;
+} 
 }
 
 .main {
 	position: relative;
-	top: 200px;
-	width: 800px;
-	left: 200px;
 	background-repeat: none;
-	font-family: Papyrus;
-	padding: 10px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .content {
 	margin: auto;
 	height: 100%;
-	max-width: 1000px;
 }
 
 .textbox {
 	color: white;
+	float: left;
+	margin: 0;
+	padding: 0;
 }
 
-.socialmedia{
-	position: fixed;
-    bottom: 0;
-    display:inline-block;
-    float:left;
-	}
-	
-.twitter-follow-button{
-	data-show-screen-name:false;
-	}
+.main img {
+	padding: 0;
+	margin: 0;
 }
+
+.socialmedia {
+	position: fixed;
+	z-index: 1000;
+	bottom: 0;
+	width: 100%;
+	display: inline-block;
+}
+
+.contact {
+	display: inline-block;
+	float:left;
+	width:40%;
+	color:white;
+}
+
+.map {
+		right:0;
+		display: inline-block;
+      }
+      
+     
+
+.twitter-follow-button {
+	data-show-screen-name: false;
 }
